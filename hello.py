@@ -34,7 +34,7 @@ def add_todo(todo_id):
 
 # curl -X DELETE localhost:5000/todos/
 # curl -X POST localhost:5000/todos/ -d "task=make sure to do lab7 questions"
-# 
+#
 
 class Todo(Resource):
     """
@@ -75,7 +75,7 @@ class TodoList(Resource):
 
 
 api.add_resource(Todo, "/todos/<int:todo_id>")
-api.add_resource(TodoList, "/todos/")
+api.add_resource(TodoList, "/todos")
 
 if __name__=="__main__":
     app.run(debug=True)
